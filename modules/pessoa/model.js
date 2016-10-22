@@ -31,7 +31,7 @@ function del(req,res,query){
 
 
 function update(req,res,body,id){
-	pessoaModel.update(id,body,(err,data)=>{
+	pessoaModel.update({"_id":id},body,{multi:false},(err,data)=>{
 		if(err) return console.log('Error: ', err);
 		res.json(data);
 	});

@@ -29,7 +29,6 @@ router.post('/', (req, res, next)=> {
 /* Rota que edita  dados */
 
 router.post('/:id', (req, res, next)=> {
-	
 	const id = req.params.id;
 	const body = req.body;
 	pessoaModel.update(req,res,body,id);
@@ -38,10 +37,11 @@ router.post('/:id', (req, res, next)=> {
 /* Rota que exclui  dados */
 
 router.get('/delete/:id', (req, res, next)=> {
-	
+
 	const id = req.params.id;
 	const query = {_id:id};
 	pessoaModel.del(req,res,query);
+	
 });
 
 module.exports = router;
