@@ -8,8 +8,8 @@ function read(req,res){
 	});
 }
 
-function readOne(req,res,query){
-	pessoaModel.findOne(query,{},(err,data)=>{
+function readOne(req,res,id){
+	pessoaModel.findOne({"_id":id},(err,data)=>{
 		if(err) return console.log('Error: ', err);
 		res.json(data);
 	});

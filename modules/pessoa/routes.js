@@ -15,7 +15,7 @@ router.get('/', (req, res, next)=> {
 router.get('/:id', (req, res, next)=> {
 	
 	const id = req.params.id;
-	pessoaModel.readOne(req,res);
+	pessoaModel.readOne(req,res,id);
 });
 
 /* Rota que salva novos dados */
